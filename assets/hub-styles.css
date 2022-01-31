@@ -170,6 +170,7 @@ button {
     transition-duration: 300ms;}
     button:hover {
         cursor: pointer;
+        background-color: #816b973f;
         filter: blur(1px)
         opacity(90%);}
     button:active {
