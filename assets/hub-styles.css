@@ -60,12 +60,13 @@ body {
 h1 {
     text-align: center;
     font-variant: small-caps;
-    position: relative;
+    position: absolute;
     color: #dddada;
     text-shadow: 1px 1px var(--bgtrim);
     line-height: 45pt;
     padding-top: 10px;
     left: 1em;
+    right: 1em;
 }
 
 
