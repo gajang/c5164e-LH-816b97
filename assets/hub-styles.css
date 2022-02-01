@@ -39,7 +39,7 @@ body {
     max-width: 500px;
     height: 15%;
     top: 10px;
-    padding: 20% 15%;
+    padding: 20% 25%;
     margin: auto;
     margin-bottom: 7px;}
 #gradient-border::before {
@@ -51,7 +51,7 @@ body {
     left: 0;
     z-index: -1;
     margin: -5px;
-    border-radius: 12px;
+    border-radius: 15px;
     background:
     linear-gradient(190deg,
     var(--bgtrim),
@@ -59,12 +59,13 @@ body {
     var(--bgtrim))}
 h1 {
     text-align: center;
-    
-    padding-top: 10px;
+    font-variant: small-caps;
+    position: relative;
     color: #dddada;
     text-shadow: 1px 1px var(--bgtrim);
-    font-variant: small-caps;
     line-height: 45pt;
+    padding-top: 10px;
+    left: 0;
 }
 
 
@@ -150,7 +151,7 @@ button {
     top: 1vh;
     left: 1vw;
     filter: blur(6px);
-    opacity: (100%);
+    opacity: (90%);
     transition-timing-function: ease-out;
     transition-duration: 300ms;}
     button:hover {
