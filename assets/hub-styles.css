@@ -202,14 +202,16 @@ button {
         height: auto;
         width: auto;}
     #container-st {
+        min-width: auto;
         height: 100%;
         width: 100%;
-        min-width: auto;
         padding-top: 15px;}
-        form {display: none;}
     .lr-container {
+        left: -0%;
+        width: 60%;
         transform: scale(0.9);
         margin: 0px 20% 0px 20%;}
     .lr-container:hover {transform: scale(0.9);}
     #gradient-border {display: none;}
+    form {display: none;}
 }
