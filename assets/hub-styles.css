@@ -40,7 +40,7 @@ body {
     max-width: 500px;
     height: 15%;
     top: 10px;
-    padding: 10%;
+    padding: 15%;
     margin: auto;
     margin-bottom: 7px;}
 #gradient-border::before {
@@ -64,8 +64,7 @@ h1 {
     position: absolute;
     color: #dddada;
     text-shadow: 1px 1px var(--bgtrim);
-    line-height: 45pt;
-    padding-top: 10px;
+    line-height: 40pt;
     left: 1em;
     right: 1em;
 }
@@ -176,6 +175,8 @@ button {
     --textpink: #fdb0c8;
 }
 
+
+
 @media only screen and (max-width: 700px) {
     body, html {
         height: auto;
@@ -184,5 +185,15 @@ button {
         width: 100%;
         height: 100%;}
         form {display: none;}
+    .lr-container {
+        transform: scale(0.8);}
+    .lr-container:hover {transform: scale(0.85);}
+    #gradient-border {
+        padding: 5%;
+        min-width: 79.9%;
+        max-width: 70%;
+
+    }
+
 }
   
