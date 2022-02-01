@@ -39,7 +39,7 @@ body {
     max-width: 500px;
     height: 15%;
     top: 10px;
-    padding: 20% 25%;
+    padding: 10%;
     margin: auto;
     margin-bottom: 7px;}
 #gradient-border::before {
@@ -65,7 +65,7 @@ h1 {
     text-shadow: 1px 1px var(--bgtrim);
     line-height: 45pt;
     padding-top: 10px;
-    left: 0;
+    left: 1em;
 }
 
 
