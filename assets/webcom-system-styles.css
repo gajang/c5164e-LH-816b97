@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+
+body, html {
+    height: auto;
+    margin: 0;
+    display: flex;
+    }
+
+body {
+    place-items: center;
+    display: grid;
+    margin: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image:
+    linear-gradient(
+        var(--bgg1),
+        var(--bgg2),
+        var(--bgg2),
+        var(--bgg2),
+        var(--bgg1));
+    }
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 30pt;
+    word-spacing: 1pt;
+    letter-spacing: 2pt;
+    }
+    
+    
+.tab-button-container {
+    margin-bottom: 8px;}
+.tab-button {
+    display: inline-block;
+    position: relative;
+    align-self: center;
+    background-color: #ffffff1a;    
+    border: 2px solid var(--button1);
+    border-radius: 5px;
+    height: 55px;
+    width: 120px;
+    margin: 0 2px;}
+   .tab-button:hover {
+        background-color: #ffffff27;
+        box-shadow: 0px 0px 5px #4fb0ff;}
+
+#panel-border {
+    border-top: 1px solid var(--button1);
+    width: 100%;
+    margin: 5px 0;}
+
+.tab-container {
+    border: 2px solid var(--button1);
+    width: 50em;
+    height: 49em;
+    margin: 5px 0;
+}
+
+
+ :root {
+    --bgg1: #0d132c;
+    --bgg2: #26325e;
+    --button1: #92beff;
+}
