@@ -14,7 +14,6 @@ body {
     margin: auto;
     display: grid;
     place-items: center;
-    
 }
 #container-st {
     background-color: var(--bg2a);
@@ -39,10 +38,9 @@ body {
     width: 99%;
     max-width: 500px;
     height: 15%;
-    top: 10px;
     padding: 15%;
     margin: auto;
-    margin-bottom: 7px;}
+    margin-bottom: 3px;}
 #gradient-border::before {
     content: "";
     position: absolute;
@@ -85,7 +83,10 @@ h1 {
     margin: 4px 20% 1px 20%;
     transition-delay: 80ms;
     transition-duration: 120ms;
-    transition-timing-function: ease-out;}
+    transition-timing-function: ease-out;
+
+    filter: blur(14px);
+    opacity: 30%;}
     .lr-container:hover {
     transform: scale(1.15);
     border-width: 3px;
@@ -116,8 +117,8 @@ h1 {
     width: 300px;
 }
 
-a {
-    display: inline-block;
+a.link {
+    display: none;
     position: relative;
     z-index: 1;
     color: var(--textpink);
@@ -165,7 +166,24 @@ button {
         filter: opacity(100%);
 }
 
-
+#spacer {
+    margin-bottom: -2px;
+    padding-bottom: 10px;
+    margin: auto;
+    width: 98%;
+    top: 0;
+    left: 0;
+    background-color: red;
+    display: block;
+    position: relative;
+    cursor: default;
+}
+#spacer:target .lr-container {
+    filter: invert(1);
+}
+#spacer:target a.link {
+    display: inline-block;
+}
 
 :root {
     --bg1: #19131f;
