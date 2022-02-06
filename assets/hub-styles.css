@@ -68,7 +68,7 @@ h1 {
 }
 
 
-.lr-container {
+#lr-container {
     display: inline-block;
     position: relative;
     border: 2.8px solid var(--bgtrim);
@@ -84,17 +84,16 @@ h1 {
     transition-delay: 80ms;
     transition-duration: 120ms;
     transition-timing-function: ease-out;
-
-    filter: blur(14px);
-    opacity: 30%;}
-    .lr-container:hover {
+    filter: blur(0px);
+    opacity: 100%;
+}
+    #lr-container:hover {
     transform: scale(1.15);
     border-width: 3px;
     background-color: var(--bg1g);
     box-shadow: 0px 0px 20px 5px #d6376946;
 }
-
-.l-image {
+#l-image {
     display: table-cell;
     vertical-align: middle;
     position: relative;
@@ -110,15 +109,13 @@ h1 {
     border-right: 2px solid white;
     border-radius: 9px;
 }
-
-.r-linktext {
+#r-linktext {
     display: table-cell;
     vertical-align: middle;
     width: 300px;
 }
-
-a.link {
-    display: none;
+a#link {
+    display: inline-block;
     position: relative;
     z-index: 1;
     color: var(--textpink);
@@ -167,7 +164,7 @@ button {
 }
 
 #spacer {
-    margin-bottom: -2px;
+    margin-top: -3px;
     padding-bottom: 10px;
     margin: auto;
     width: 98%;
@@ -178,11 +175,14 @@ button {
     position: relative;
     cursor: default;
 }
-#spacer:target .lr-container {
-    filter: invert(1);
+#spacer:target #lr-container {
+    filter: blur(14px);
+    opacity: 30%;
+    background-color: red;
 }
-#spacer:target a.link {
-    display: inline-block;
+#spacer:target a#link {
+    display: none;
+    background-color: red;
 }
 
 :root {
