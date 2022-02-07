@@ -66,10 +66,32 @@ h1 {
     left: 1em;
     right: 1em;
 }
+button {
+    position: absolute;
+    background-color: var(--bg1g);
+    border: 1px solid var(--bgtrim);
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    top: 1vh;
+    left: 1vw;
+    filter: blur(6px);
+    opacity: (90%);
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;}
+    button:hover {
+        cursor: pointer;
+        background-color: #816b973f;
+        filter: blur(1px)
+        opacity(90%);}
+    button:active {
+        background-color: var(--bgtrim);
+        filter: opacity(100%);
+}
 
-
-#lr-container {
-    display: inline-block;
+ /* Parent Link Container */
+#key {
+    display: none;
     position: relative;
     border: 2.8px solid var(--bgtrim);
     border-radius: 10px;
@@ -84,10 +106,9 @@ h1 {
     transition-delay: 80ms;
     transition-duration: 120ms;
     transition-timing-function: ease-out;
-    filter: blur(0px);
-    opacity: 100%;
-}
-    #lr-container:hover {
+    filter: blur(10px);
+    opacity: 30%;}
+    #key:hover {
     transform: scale(1.15);
     border-width: 3px;
     background-color: var(--bg1g);
@@ -101,7 +122,7 @@ h1 {
     padding-right: 5px;
     margin: 0;
     top: 12px;}
-   #list {
+   #img-strip {
     position: relative;
     top: 0;
     height: 70px;
@@ -112,9 +133,8 @@ h1 {
 #r-linktext {
     display: table-cell;
     vertical-align: middle;
-    width: 300px;
-}
-a#link {
+    width: 300px;}
+ a#link {
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -140,50 +160,23 @@ a#link {
      transition-duration: 100ms;
 }
 
-button {
-    position: absolute;
-    background-color: var(--bg1g);
-    border: 1px solid var(--bgtrim);
-    border-radius: 50px;
-    height: 30px;
-    width: 30px;
-    top: 1vh;
-    left: 1vw;
-    filter: blur(6px);
-    opacity: (90%);
-    transition-timing-function: ease-out;
-    transition-duration: 300ms;}
-    button:hover {
-        cursor: pointer;
-        background-color: #816b973f;
-        filter: blur(1px)
-        opacity(90%);}
-    button:active {
-        background-color: var(--bgtrim);
-        filter: opacity(100%);
-}
-
-#spacer {
+#spacer a{
     margin-top: -3px;
     padding-bottom: 10px;
     margin: auto;
     width: 98%;
     top: 0;
     left: 0;
-    background-color: red;
     display: block;
     position: relative;
-    cursor: default;
+    cursor: default;}
+#key:target ~ #key{
+    filter: blur(0);
+    opacity: 100%;
+    display: inline-block;
 }
-#spacer:target #lr-container {
-    filter: blur(14px);
-    opacity: 30%;
-    background-color: red;
-}
-#spacer:target a#link {
-    display: none;
-    background-color: red;
-}
+
+
 
 :root {
     --bg1: #19131f;
@@ -194,7 +187,6 @@ button {
 }
 
 
-  
 @media only screen and (max-width: 500px) {
     body, html {
         height: auto;
