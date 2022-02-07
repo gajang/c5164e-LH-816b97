@@ -106,7 +106,6 @@ button {
     transition-delay: 80ms;
     transition-duration: 120ms;
     transition-timing-function: ease-out;
-    filter: blur(10px);
     opacity: 30%;}
     #key:hover {
     transform: scale(1.15);
@@ -171,9 +170,10 @@ button {
     position: relative;
     cursor: default;}
 #key:target ~ #key{
-    filter: blur(0);
     opacity: 100%;
     display: inline-block;
+    transition-delay: 80ms;
+    transition-duration: 120ms;
 }
 
 
