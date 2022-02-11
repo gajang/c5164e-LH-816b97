@@ -98,7 +98,7 @@ button {
     display: none;
     position: relative;
     border: 2.8px solid var(--bgtrim);
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     border-radius: 10px;
     left: 5%;
     bottom: 0;
@@ -136,7 +136,6 @@ button {
 #r-linktext {
     display: table-cell;
     vertical-align: middle;
-    padding-left: 3px;
     transition-delay: 80ms;
     transition-duration: 120ms;
 
