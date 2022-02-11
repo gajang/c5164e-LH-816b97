@@ -40,8 +40,6 @@ body {
     height: 15%;
     padding: 15%;
     margin: auto;
-    transition-timing-function: ease-in-out;
-    transition-duration: 500ms;
     margin-bottom: 3px;}
 #gradient-border::before {
     content: "";
@@ -100,6 +98,7 @@ button {
     display: none;
     position: relative;
     border: 2.8px solid var(--bgtrim);
+    letter-spacing: 0.5px;
     border-radius: 10px;
     left: 5%;
     bottom: 0;
