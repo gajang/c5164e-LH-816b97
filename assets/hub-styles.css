@@ -98,7 +98,7 @@ button {
     display: none;
     position: relative;
     border: 2.8px solid var(--bgtrim);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     border-radius: 10px;
     left: 5%;
     bottom: 0;
@@ -138,7 +138,6 @@ button {
     vertical-align: middle;
     transition-delay: 80ms;
     transition-duration: 120ms;
-
     width: 300px;}
  a#link {
     display: inline-block;
