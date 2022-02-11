@@ -40,6 +40,8 @@ body {
     height: 15%;
     padding: 15%;
     margin: auto;
+    transition-timing-function: ease-in-out;
+    transition-duration: 500ms;
     margin-bottom: 3px;}
 #gradient-border::before {
     content: "";
@@ -61,8 +63,12 @@ h1 {
     font-variant: small-caps;
     position: absolute;
     color: #dddada;
+    font-family: 'open sans condensed';
     text-shadow: 1px 1px var(--bgtrim);
-    line-height: 40pt;
+    font-size: 40pt;
+    line-height: 45pt;
+    letter-spacing: 4px;
+    padding-bottom: 5px;
     left: 1em;
     right: 1em;
 }
@@ -105,8 +111,7 @@ button {
     margin: 4px 20% 1px 20%;
     transition-delay: 80ms;
     transition-duration: 120ms;
-    transition-timing-function: ease-out;
-    opacity: 30%;}
+    transition-timing-function: ease-out;}
     #key:hover {
     transform: scale(1.15);
     border-width: 3px;
@@ -132,6 +137,10 @@ button {
 #r-linktext {
     display: table-cell;
     vertical-align: middle;
+    padding-left: 3px;
+    transition-delay: 80ms;
+    transition-duration: 120ms;
+
     width: 300px;}
  a#link {
     display: inline-block;
@@ -160,22 +169,19 @@ button {
 }
 
 #spacer a{
+    margin: auto;
     margin-top: -3px;
     padding-bottom: 10px;
-    margin: auto;
     width: 98%;
     top: 0;
     left: 0;
+    transition-duration: 800ms;
     display: block;
     position: relative;
     cursor: default;}
 #key:target ~ #key{
-    opacity: 100%;
     display: inline-block;
-    transition-delay: 80ms;
-    transition-duration: 120ms;
 }
-
 
 
 :root {
