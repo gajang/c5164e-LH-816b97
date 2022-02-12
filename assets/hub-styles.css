@@ -145,7 +145,7 @@ button {
     position: relative;
     z-index: 1;
     color: #f8407a;
-    text-shadow: 0.5px 1px #ffc2d5;
+    text-shadow: 0.5px 0.5px #ffc2d5;
     font-size: 19pt;
     text-align: left;
     text-decoration: none;
