@@ -93,7 +93,7 @@ button {
     button:active {
         background-color: #d6376946;
         box-shadow: 0px 0px 15px 0.5px #ff8363;
-        transform: rotate(60deg);}
+        transform: rotate(120deg);}
     button img {
     opacity: 0%;}
     button:hover img {
