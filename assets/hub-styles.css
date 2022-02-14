@@ -141,7 +141,12 @@ button {
     border-right: 2px solid white;
     border-radius: 9px;}
     #bp {
-        width: 14.45em;}
+        display: inline-flex;
+        position: relative;
+        padding: auto;
+        width: 100%;
+        padding-right: 8px;
+    }
     #l-image-fill {
         display: inline-flex;
         position: relative;
