@@ -145,8 +145,8 @@ button {
         position: relative;
         padding: auto;
         padding-right: 8px;
-        top: -13%;
-        width: 100%;
+        max-width: 100%;
+        top: -6px;
     }
     #l-image-fill {
         display: inline-flex;
