@@ -133,14 +133,23 @@ button {
     padding-right: 5px;
     margin: 0;
     top: 12px;}
-   #img-strip {
+   #img-liner {
     position: relative;
     top: 0;
     height: 70px;
     width: 70px;
     border-right: 2px solid white;
-    border-radius: 9px;
-}   /* Link Alignment/Styles */
+    border-radius: 9px;}
+    #bp {
+        width: 14.45em;}
+    #l-image-fill {
+        display: inline-flex;
+        position: relative;
+        padding: 0;
+        padding-right: 0px;
+        margin: 0;
+        top: 26px;}
+/* Link Alignment/Styles */
 #r-linktext {
     display: table-cell;
     vertical-align: middle;
