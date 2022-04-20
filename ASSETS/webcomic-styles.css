@@ -32,8 +32,16 @@ body {
 }
 
 
+
+
 :root {
-    --bgg1: #5e452a;
-    --bgg2: #644b2f;
-    --bgg3: #6e5234;
+    --bgg1: #ffffff;
+    --bgg2: #7c5e3b;
+    --bgg3: #836544;
 }
+
+@media only screen and (max-width: 500px) {
+    body, html {
+        height: auto;
+        width: auto;}
+}  /* Mobile Size Scaling */
