@@ -106,7 +106,6 @@ a#list {
 
 
 
-
    /* Home Button from Index */
 button {
     position: absolute;
@@ -137,9 +136,7 @@ button img {
     width: 20px;
     right: 1.5px;
     padding-top: 3px;
-    opacity: 0%;
-
-}
+    opacity: 0%;}
 button:hover img {
     opacity: 100%;
 }
