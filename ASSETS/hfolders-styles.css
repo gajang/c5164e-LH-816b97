@@ -6,6 +6,8 @@ body, html {
     display: flex;}
 body {
     margin-top: 15vh;
+    background-attachment: fixed;
+
     font-size: 25pt;
     font-family: system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', Roboto, 
@@ -25,40 +27,72 @@ body {
     width: 20vw;
     max-width: 30vw;
 
-    outline: 1px solid #ffffff17;
-    background-color: #ffffff13;
+    outline: 1px solid var(--lightgray);
+    background-color: var(--gray);
     border-radius: 5px;
     backdrop-filter: blur(1px);
     color: white;
 }
 .container:hover {
     cursor: pointer;
-    outline: 1px solid #ffffff2c;
+    outline: 1px solid var(--nearwhite);
     backdrop-filter: blur(2px);
-    box-shadow: 0px 1px 12px #ffffff13;
+    box-shadow: 0px 1px 12px var(--gray);
 }
 
 iframe {
     position: absolute;
-    top: 1vh;
+    top: 0vh;
     left: 0%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
     
     width: 60vw;
-    height: 100vh;
+    height: 98vh;
     margin-left: 35%;
     
-    border: 1px solid #ffffff17;
-    background-color: #1c1a2433;
+    border: 1px solid var(--lightgray);
+    background-color: #1a1d2433;
     backdrop-filter: blur(2px);
 }
 
 details[open] .container {
     margin-bottom: 56.25px;
-    background-color: #ffffff17;
-    outline: 1px solid #ffffff2c;
-    box-shadow: 0px 1px 12px #ffffff13;
+    background-color: var(--lightgray);
+    outline: 1px solid var(--nearwhite);
+    box-shadow: 0px 1px 12px var(--gray);
 }   
 
+   /* Home Button */
+button {
+    position: absolute;
+    background-color: #64646444;
+    border: 1px solid var(--lightgray);
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    top: 1vh;
+    left: 1vw;
+    filter: blur(6px);
+    opacity: (90%);
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;}
+button:hover {
+    cursor: pointer;
+    background-color: #816b973f;
+    box-shadow: 0px 0px 15px 0.5px #fff1305d;
+    filter: blur(0)
+    opacity(100%);}
+button:active {
+    background-color: #d6376946;
+    box-shadow: 0px 0px 15px 0.5px #ff8363;
+    transform: rotate(120deg);}
+button img {
+    opacity: 10%;}
+button:hover img {
+    opacity: 100%;
+    filter: blur(0);
+}
 
 a {
     text-decoration: none;
@@ -67,3 +101,10 @@ body::-webkit-scrollbar {
     display: none;
     scrollbar-width: none;
 } /* Disables Scrollbar Visual */
+
+
+:root {
+    --gray: #ffffff13;
+    --lightgray: #ffffff17;
+    --nearwhite: #ffffff2c;
+}
