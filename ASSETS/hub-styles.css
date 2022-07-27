@@ -7,20 +7,28 @@ body, html {
 }
 
 body {
-    background-image: linear-gradient(90deg,
-    var(--bg1g),var(--bg1),
-    var(--bg1),var(--bg1g));
+    background-color:var(--bg2);
+    background-image: linear-gradient(30deg, var(--bg1g) 12%, transparent 12.5%, transparent 87%, var(--bg1g) 87.5%, var(--bg1g)),
+    linear-gradient(150deg, var(--bg1g) 12%, transparent 12.5%, transparent 87%, var(--bg1g) 87.5%, var(--bg1g)),
+    linear-gradient(30deg, var(--bg1g) 12%, transparent 12.5%, transparent 87%, var(--bg1g) 87.5%, var(--bg1g)),
+    linear-gradient(150deg, var(--bg1g) 12%, transparent 12.5%, transparent 87%, var(--bg1g) 87.5%, var(--bg1g)),
+    linear-gradient(60deg, var(--bg1) 25%, transparent 25.5%, transparent 75%, var(--bg1) 75%, var(--bg1)),
+    linear-gradient(60deg, var(--bg1) 25%, transparent 25.5%, transparent 75%, var(--bg1) 75%, var(--bg1));
+    background-size:80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
     height: auto;
     margin: auto;
     display: grid;
     place-items: center;
 }
 
+
 #container-st {
     position: relative;
     min-width: 500px;
     height: 100vh;
-    width: 40vw;
+    width: 35vw;
     margin: auto;
     padding-top: 10px;
     border-radius: 5px;
@@ -29,7 +37,7 @@ body {
     border-right: 2px solid transparent;
     background-attachment: fixed;
     background-clip: padding-box;
-    background-color: #201928;
+    background-color: var(--bg2);
 }
 #container-st::before {
     content: "";
@@ -49,6 +57,29 @@ body {
     var(--bgtrim)) 
 }
 
+#bgradient-l {
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: -22vw;
+    background-size: contain;
+    backdrop-filter: opacity(30%);
+    background-image: url(/IMAGES/bg-gradient.png);
+}
+#bgradient-r {
+    width: 40vw;
+    height: 100vh;
+    position: absolute;
+    transform: scale(-1);
+    z-index: -2;
+    top: 0;
+    left: 17vw;
+    background-size: contain;
+    backdrop-filter: opacity(30%);
+    background-image: url(/IMAGES/bg-gradient.png);
+}
 
 #gradient-border {
     background: var(--bg1);
@@ -84,20 +115,6 @@ body {
     var(--bgtrim))
 }
 
-h1 {
-    text-align: center;
-    font-variant: small-caps;
-    position: absolute;
-    color: #ffc2d5;
-    font-family: 'open sans condensed';
-    text-shadow: 1px 1px var(--bgtrim);
-    font-size: 40pt;
-    line-height: 45pt;
-    letter-spacing: 4px;
-    padding-bottom: 5px;
-    left: 1em;
-    right: 1em;
-}
 
     /* Home Button */
 button {
@@ -156,6 +173,7 @@ button:hover img {
 .key {
     display: none;
 }
+
     /* Key Image */
 #l-image {
     display: table-cell;
@@ -226,8 +244,6 @@ a:active {
     transition-delay: 0ms;
     transition-duration: 100ms;
 }
-
-    /* Key Housing */
 #spacer a{
     margin: auto;
     margin-top: -1vh;
@@ -243,10 +259,12 @@ a:active {
 
 
 
+
+
 :root {
     --bg1: #19131f;
     --bg1g: #271e30;
-    --bg2a: #4a3e5a28;
+    --bg2: #201928;
     --bgtrim: #816b97;
     --textpink: #fdb0c8;
 }
