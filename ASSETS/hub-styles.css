@@ -15,16 +15,40 @@ body {
     display: grid;
     place-items: center;
 }
+
 #container-st {
-    background-attachment: fixed;
-    background-color: var(--bg2a);
+    position: relative;
+    min-width: 500px;
     height: 100vh;
     width: 40vw;
-    min-width: 500px;
-    border-left: 1px solid var(--bgtrim);
-    border-right: 1px solid var(--bgtrim);
+    margin: auto;
+    padding-top: 10px;
     border-radius: 5px;
+    box-sizing: border-box;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    background-attachment: fixed;
+    background-clip: padding-box;
+    background-color: #201928;
 }
+#container-st::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: 0px -1px;
+    filter: blur(1px);
+    border-radius: 3px;
+    background:
+    linear-gradient(190deg,
+    var(--bgtrim),
+    #ffffffb7,
+    var(--bgtrim)) 
+}
+
 
 #gradient-border {
     background: var(--bg1);
@@ -40,7 +64,8 @@ body {
     height: 15%;
     padding: 15%;
     margin: auto;
-    margin-bottom: 3px;}
+    margin-bottom: 3px;
+}
 #gradient-border::before {
     content: "";
     position: absolute;
@@ -56,7 +81,9 @@ body {
     linear-gradient(190deg,
     var(--bgtrim),
     #ffffffb7,
-    var(--bgtrim))}
+    var(--bgtrim))
+}
+
 h1 {
     text-align: center;
     font-variant: small-caps;
@@ -71,7 +98,8 @@ h1 {
     left: 1em;
     right: 1em;
 }
-   /* Home Button */
+
+    /* Home Button */
 button {
     position: absolute;
     background-color: var(--bg1g);
@@ -85,26 +113,25 @@ button {
     opacity: (90%);
     transition-timing-function: ease-out;
     transition-duration: 300ms;}
-    button:hover {
-        cursor: pointer;
-        background-color: #816b973f;
-        box-shadow: 0px 0px 15px 0.5px var(--bgtrim);
-        filter: blur(0)
-        opacity(100%);}
-    button:active {
-        background-color: #d6376946;
-        box-shadow: 0px 0px 15px 0.5px #ff8363;
-        transform: rotate(120deg);}
-    button img {
-    opacity: 0%;}
-    button:hover img {
-        opacity: 100%;
-        filter: blur(0);
+button:hover {
+    cursor: pointer;
+    background-color: #816b973f;
+    box-shadow: 0px 0px 15px 0.5px var(--bgtrim);
+    filter: blur(0)
+    opacity(100%);}
+button:active {
+    background-color: #d6376946;
+    box-shadow: 0px 0px 15px 0.5px #ff8363;
+    transform: rotate(120deg);}
+button img {
+opacity: 0%;}
+button:hover img {
+    opacity: 100%;
+    filter: blur(0);
 }
 
- /* Parent Link Container */
+    /* Link Container Shell */
 #key {
-    display: none;
     position: relative;
     border: 2.8px solid var(--bgtrim);
     letter-spacing: 0.2px;
@@ -120,12 +147,16 @@ button {
     transition-delay: 100ms;
     transition-duration: 120ms;
     transition-timing-function: ease-out;}
-   #key:hover {
+#key:hover {
     transform: scale(1.15);
     border-width: 3px;
     background-color: var(--bg1g);
     box-shadow: 0px 0px 20px 5px #d6376946;
-}   /* Image Alignment/Styles */
+}
+.key {
+    display: none;
+}
+    /* Key Image */
 #l-image {
     display: table-cell;
     vertical-align: middle;
@@ -133,39 +164,44 @@ button {
     padding: 0;
     padding-right: 5px;
     margin: 0;
-    top: 12px;}
-   #img-liner {
+    top: 12px;
+}
+#img-liner {
     position: relative;
     top: 0;
     height: 70px;
     width: 70px;
     border-right: 2px solid white;
-    border-radius: 9px;}
-    #bp {
-        display: inline-flex;
-        position: relative;
-        padding: auto;
-        padding-right: 8px;
-        max-width: 100%;
-        top: -6px;
-    }
-    #l-image-fill {
-        display: inline-flex;
-        position: relative;
-        padding: 0;
-        padding-right: 0px;
-        margin: 0;
-        top: 26px;}
-/* Link Alignment/Styles */
+    border-radius: 9px;
+}
+#bp {
+    display: inline-flex;
+    position: relative;
+    padding: auto;
+    padding-right: 8px;
+    max-width: 100%;
+    top: -6px;
+}
+#l-image-fill {
+    display: inline-flex;
+    position: relative;
+    padding: 0;
+    padding-right: 0px;
+    margin: 0;
+    top: 26px;
+}
+
+    /* Key Link */
 #r-linktext {
     display: table-cell;
     margin: auto;
     vertical-align: middle;
     transition-delay: 80ms;
     transition-duration: 120ms;
-    width: 300px;}
- a#link {
-    display: inline-block;
+    width: 300px;
+}
+a#link {
+    display: inline-flex;
     position: relative;
     color: #f8407a;
     text-shadow: 0.5px 0.5px #ffc2d5;
@@ -180,29 +216,31 @@ button {
     margin-right: -3em;
     padding-bottom: 2em;
     margin-bottom: -2em;
-    top: 13px;}
-    a:active {
-     color: #da5f84;
-     font-size: 18pt;
-     top: 17px;
-     filter: blur(1px);
-     transition-delay: 0ms;
-     transition-duration: 100ms;
+    top: 10px;
 }
+a:active {
+    color: #da5f84;
+    font-size: 18pt;
+    top: 17px;
+    filter: blur(1px);
+    transition-delay: 0ms;
+    transition-duration: 100ms;
+}
+
     /* Key Housing */
 #spacer a{
     margin: auto;
-    margin-top: -3px;
-    padding-bottom: 10px;
+    margin-top: -1vh;
+    margin-bottom: 30px;
+    padding: 0px 20px 10px 20px;
     width: 98%;
     top: 0;
     left: 0;
     display: block;
     position: relative;
     cursor: default;}
-#key:target ~ #key{
-    display: inline-block;
-}
+#key:target ~ .key{display: inherit;}
+
 
 
 :root {
@@ -212,7 +250,6 @@ button {
     --bgtrim: #816b97;
     --textpink: #fdb0c8;
 }
-
 
 @media only screen and (max-width: 500px) {
     body, html {
